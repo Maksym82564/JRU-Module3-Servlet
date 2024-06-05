@@ -17,7 +17,6 @@ public class InitServlet extends HttpServlet {
         HttpSession currentSession = req.getSession(true);
 
         Field field = new Field();
-        Map<Integer, Sign> fieldData = field.getField();
 
         List<Sign> data = field.getFieldData();
 
