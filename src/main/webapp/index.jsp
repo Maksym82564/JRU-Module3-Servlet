@@ -4,25 +4,26 @@
 <html>
 <head>
     <link href="static/main.css" rel="stylesheet">
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <title>Tic-Tac-Toe</title>
 </head>
 <body>
 <h1>Tic-Tac-Toe</h1>
 <table>
     <tr>
-        <td class="table-cell" onclick="window.location='/turn?click=8'">0</td>
-        <td class="table-cell" onclick="window.location='/turn?click=8'">1</td>
-        <td class="table-cell" onclick="window.location='/turn?click=8'">2</td>
+        <td class="table-cell" onclick="window.location='/turn?click=0'">${data.get(0).getSign()}</td>
+        <td class="table-cell" onclick="window.location='/turn?click=1'">${data.get(1).getSign()}</td>
+        <td class="table-cell" onclick="window.location='/turn?click=2'">${data.get(2).getSign()}</td>
     </tr>
     <tr>
-        <td class="table-cell" onclick="window.location='/turn?click=8'">3</td>
-        <td class="table-cell" onclick="window.location='/turn?click=8'">4</td>
-        <td class="table-cell" onclick="window.location='/turn?click=8'">5</td>
+        <td class="table-cell" onclick="window.location='/turn?click=3'">${data.get(3).getSign()}</td>
+        <td class="table-cell" onclick="window.location='/turn?click=4'">${data.get(4).getSign()}</td>
+        <td class="table-cell" onclick="window.location='/turn?click=5'">${data.get(5).getSign()}</td>
     </tr>
     <tr>
-        <td class="table-cell" onclick="window.location='/turn?click=8'">6</td>
-        <td class="table-cell" onclick="window.location='/turn?click=8'">7</td>
-        <td class="table-cell" onclick="window.location='/turn?click=8'">8</td>
+        <td class="table-cell" onclick="window.location='/turn?click=6'">${data.get(6).getSign()}</td>
+        <td class="table-cell" onclick="window.location='/turn?click=7'">${data.get(7).getSign()}</td>
+        <td class="table-cell" onclick="window.location='/turn?click=8'">${data.get(8).getSign()}</td>
     </tr>
 </table>
 
