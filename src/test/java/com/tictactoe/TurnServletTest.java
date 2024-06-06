@@ -1,7 +1,6 @@
 package com.tictactoe;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -131,7 +130,7 @@ public class TurnServletTest {
     }
 
     @Test
-    public void testDoGet_FieldIsInvalid() throws Exception {
+    public void testDoGet_FieldIsInvalid() {
         Object wrongObject = new Object();
         when(session.getAttribute("field")).thenReturn(wrongObject);
 
