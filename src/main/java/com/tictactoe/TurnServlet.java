@@ -1,5 +1,6 @@
 package com.tictactoe;
 
+import com.exception.InvalidArgumentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,8 +20,6 @@ public class TurnServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        logger.info("Processing GET request for /turn");
-
         HttpSession currentSession = req.getSession();
         Field field = extractField(currentSession);
         int index = getSelectedIndex(req);
@@ -92,7 +91,7 @@ public class TurnServlet extends HttpServlet {
         if (Field.class != fieldAttribute.getClass()) {
             currentSession.invalidate();
             logger.error("Field attribute is invalid, invalidating session");
-            throw new RuntimeException("Field attribute is invalid");
+            throw new InvalidArgumentException("Field attribute is invalid");
         }
         return (Field) fieldAttribute;
     }

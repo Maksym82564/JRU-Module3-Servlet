@@ -21,6 +21,5 @@ public class RestartServlet extends HttpServlet {
         logger.info("Session invalidated");
 
         resp.sendRedirect("/start");
-        logger.info("Redirected to /start");
     }
 }
